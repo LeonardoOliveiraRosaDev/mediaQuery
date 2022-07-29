@@ -1,0 +1,111 @@
+h1 {
+    color: red;
+}
+
+/* 2 - sintaxe  screen tela*/
+@media screen  and (max-width:500px){
+/* MAX WIDTH = Tela menores que alguma resolucao */
+    h1 {
+        color: blue;
+    }
+}
+
+/* 1 - outros modos */
+/* screen, print, speech, all - mais utilizado atinge todos */
+@media print and (max-width: 600px){
+    /* para impressao mediante ao preview */
+    h1 {
+        color:green;
+    }
+}
+
+/* 4 - Todos os modos ALL SERIA O MAIS USADOS */
+@media (max-width: 700px){
+    h2 {
+        color:purple;
+    }
+}
+
+/* 5 - Moblile first */
+/* min-width > max width */
+@media (min-width:200px) {
+    h2{
+        color: teal;
+    }
+}
+
+/* 6 - AND na media query */
+@media (min-width:300px) and (max-width: 400px){
+    h3 {
+        font-size: 3em;
+    }
+}
+
+/* 7 - Oriebtation quando vira o celular */
+@media (orientation: landscape){
+    h3 {
+        color: brown;
+    }
+}
+
+/* 8 - OR na media query ou faz uma coisa ou outra coisa  */
+@media (max-width: 200px), (orientation: landscape){
+    h3{
+        font-size: 4em;
+    }
+}
+
+/* 9 -  Cuidado ao aplicar MQ */
+@media (max-width: 400px){
+    h3{
+        color: red;
+    }
+}
+/* A ordem do css importa  regras normais podem sobrescrever o media queria, segue tb uma regra
+Regras 
+o que sao media queries sempre no final do css
+
+MAX-WIDTH - telas menores que a resolução
+MIN-WIDTH - Telas maiores que a resolução
+*/
+
+/* 10 - breakpoints  atingindo telas especificas baseadas em resolucoes,*/
+h5 {
+    color: aqua;
+}
+
+
+/* 320px - 480px = mobile */
+/* Em mobile first não precisa de MQ */
+h5 {
+    color: aqua;
+    font-size: 2em;
+  }
+  
+  /* 480px - 768px = tablet */
+  @media (min-width: 480px) {
+    h5 {
+      color: burlywood;
+    }
+  }
+  
+  /* 768px - 1024px = telas menores, laptops */
+  @media (min-width: 768px) {
+    h5 {
+      color: cadetblue;
+    }
+  }
+  
+  /* 1024px - 1200px = desktop */
+  @media (min-width: 1024px) {
+    h5 {
+      color: coral;
+    }
+  }
+  
+  /* 1200 e + = telas maiores, tvs */
+  @media (min-width: 1200px) {
+    h5 {
+      color: darkorchid;
+    }
+  }
